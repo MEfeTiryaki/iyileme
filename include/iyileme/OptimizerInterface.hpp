@@ -19,6 +19,8 @@ class OptimizerInterface
     // Init
     virtual void initilize( int stateLength){
       stateLength_ = stateLength ;
+      globalMinimumValues_ = Eigen::VectorXd::Zero(stateLength_);
+      globalMinimumCost_ = 10000.0;
     };
 
     virtual void optimize(){};

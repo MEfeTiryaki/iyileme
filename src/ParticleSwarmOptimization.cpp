@@ -25,8 +25,6 @@ void ParticleSwarmOptimization::initilize( int stateLength
   IterativeOptimizerBase::initilize(stateLength,maxIteration);
   // Problem varibles
   numberOfParticles_ = numberOfParticles;
-  globalMinimumValues_ = Eigen::VectorXd::Zero(stateLength_);
-  globalMinimumCost_ = 10000.0;
   cost_ = func;
   bound_ = bound;
   constants_ = constants;
