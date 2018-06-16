@@ -1,0 +1,10 @@
+maxIteration : 1000
+particleNumber : 100
+gamma : 0.1
+alpha : 1.0
+beta : 0.2
+zeta : 0.1
+bound:
+  upper : [4.0,4.0]
+  lower : [0.0,0.0]
+  startVelocityMax : [1.0,1.0]
