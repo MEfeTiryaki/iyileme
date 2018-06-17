@@ -95,6 +95,7 @@ void ParticleSwarmOptimization::optimize(){
         }
       }
     }
+    constants_.alpha *=0.99;
     i++ ;
   }
   // the code you wish to time goes here

@@ -50,3 +50,15 @@ target_link_libraries(iyileme_test
   ${PROJECT_NAME}
   ${catkin_LIBRARIES}
 )
+
+add_executable(quad_test
+  src/quad_test.cpp
+)
+add_dependencies(quad_test
+  ${PROJECT_NAME}
+  ${catkin_EXPORTED_TARGETS}
+)
+target_link_libraries(quad_test
+  ${PROJECT_NAME}
+  ${catkin_LIBRARIES}
+)
