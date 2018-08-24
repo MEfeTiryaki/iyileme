@@ -46,12 +46,11 @@ int main(int argc, char **argv)
   read(H,f,H_,f_);
   read(E,d,E_,d_);
   read(A,b,A_,b_);
+  std::cout<<A<<std::endl;
+  std::cout<<b<<std::endl;
   optimizer.setCost(H,f);
   optimizer.setEqualityConstrains(E,d);
-  /*
   optimizer.setInequalityConstrains(A,b);
-  optimizer.optimize();
-  */
   optimizer.optimize();
 
 

@@ -29,6 +29,37 @@ void QuadraticOptimization::setInequalityConstrains( Eigen::MatrixXd A
 {
   A_ = A;
   b_ = b;
+  int rows = A_.rows();
+  int cols = A_.cols();
+  Eigen::VectorXd x ;
+  Eigen::VectorXd y ;
+  Eigen::VectorXd z ;
+  double k ;
+  for(int i = 0 ;i < rows-1; i++){
+    for(int j = i+1 ;j < rows; j++){
+      x = A.row(i);
+      y = A.row(j);
+      k = (x.transpose()*x)/(x.transpose()*y) ;
+      z = y*k;
+      bool flag = true;
+      for (int k=0 ;k <cols ;k++ ){
+          flag &= z[k]==x[k];
+          if(!flag)
+            break;
+      }
+      if(flag){
+        A_.conservativeResize(A_.rows(), A_.cols()+1);
+        b_.conservativeResize(b_.size()+1);
+        if (k*b[i]<b[j]){
+          b
+        }
+        A_.conservativeResize(mat.rows(), mat.cols()+1);
+        A_.col(mat.cols()-1) = vec;
+        std::cout<< "equal const" << std::endl;
+      }
+    }
+  }
+
   isInequalityConstrained = true ;
 }
 void QuadraticOptimization::setEqualityConstrains( Eigen::MatrixXd E
